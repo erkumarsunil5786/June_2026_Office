@@ -1,4 +1,4 @@
-name: Terraform Infra CI/CD
+name: Terraform Infra CI/CD Using OIDC Method
 run-name: Triggered By ${{ github.actor }}
 on:
   workflow_dispatch:
