@@ -1,4 +1,4 @@
-name: ##Using Variable Workflow##
+name: Using Variable Workflow
 on:
   workflow_dispatch:
 run-name: This Workflow Run By ${{ github.actor }} with Run Id ${{ github.run_id }}
@@ -22,7 +22,7 @@ jobs:
       Abc: Hi
     steps:
     - name: Printing Message using Variable on Window Runner
-      run: Write-Host "$Abc $User is using $cloud"
+      run: Write-Host "${{ env.Abc }} ${{ env.User }} is using ${{ env.cloud }}"
       env:
         User: Sushil
     
