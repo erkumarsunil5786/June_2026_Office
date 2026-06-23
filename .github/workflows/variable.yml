@@ -1,0 +1,25 @@
+name: ##Using Variable Workflow##
+on:
+  workflow_dispatch:
+run-name: This Workflow Run By ${{ github.actor }} with Run Id ${{ github.run_id }}
+env:
+  cloud: Azure Cloud
+jobs:
+  My_First_Job:
+    name: My First Job
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
+    steps:
+    - name: Printing Message Using Variable On Linux Runner
+      run: echo "$Greeting $User is using $cloud!"
+      env:
+        User: Sunil
+  My_Second_Job:
+    name: My Second Job 
+    runs-on: windows-latest
+    steps:
+    - name: Printing Message using Variable on Window Runner
+      run: echo "$Greeting $User is using $cloud
+    
+    
