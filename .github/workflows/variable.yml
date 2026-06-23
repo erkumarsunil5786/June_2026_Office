@@ -22,7 +22,7 @@ jobs:
       Abc: Hi
     steps:
     - name: Printing Message using Variable on Window Runner
-      run: echo "$Abc $User is using $cloud"
+      run: Write-Host "$Abc $User is using $cloud"
       env:
         User: Sushil
     
