@@ -1,6 +1,12 @@
 name: Using Variable Workflow
 on:
   workflow_dispatch:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
 run-name: This Workflow Run By ${{ github.actor }} with Run Id ${{ github.run_id }}
 env:
   cloud: Azure Cloud
