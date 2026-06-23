@@ -1,0 +1,34 @@
+name: ##My First Workflow##
+run-name: Deploy By ${{ github.actor }} with Run Number ${{ github.run_number }}
+on: 
+  push:
+    branches:
+      - main
+      - feature
+      - release
+  pull_request:
+    branches:
+      - main
+jobs:
+  My_First_Job:
+    name: My First Job 
+    runs-on: ubuntu-latest
+    steps:
+    - name: My First Step
+      run: echo "Hello GitHub Action! Good Afternoon"
+    - name: My Second Step
+      run: echo "Hello Github Action! Good Night"
+  My_Second_Job:
+    name: My Second Job
+    runs-on: ubuntu-latest
+    steps:
+    - name: My Second Step from Second Job
+      run: echo "Hello GitHub Action! Good Morning"
+  My_Third_Job:
+    name: My Third Job
+    runs-on: windows-latest
+    steps:
+    - name: Print message using PowerShell
+      run: Write-Host "Hello from Windows GitHub Actions Runner!"
+     
+    
