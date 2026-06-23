@@ -7,7 +7,7 @@ on:
   pull_request:
     branches:
     - main
-run-name: Triggered By ${{ github.actor }} | Branch: ${{ github.ref_name }} | Run Id: ${{ github.run_id }}
+run-name: "Triggered By ${{ github.actor }} | Branch: ${{ github.ref_name }} | Run Id: ${{ github.run_id }}"
 env:
   cloud: Azure Cloud
 jobs:
