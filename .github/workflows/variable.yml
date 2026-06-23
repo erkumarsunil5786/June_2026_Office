@@ -7,7 +7,7 @@ on:
   pull_request:
     branches:
     - main
-run-name: This Workflow Run By ${{ github.actor }} with Run Id ${{ github.run_id }}
+run-name: Triggered By ${{ github.actor }} | Branch: ${{ github.run_id }} | Run Id: ${{ github.run_id }}
 env:
   cloud: Azure Cloud
 jobs:
