@@ -18,8 +18,12 @@ jobs:
   My_Second_Job:
     name: My Second Job 
     runs-on: windows-latest
+    env:
+      Abc: Hi
     steps:
     - name: Printing Message using Variable on Window Runner
-      run: echo "$Greeting $User is using $cloud
+      run: echo "$Abc $User is using $cloud
+      env:
+        User: Sushil
     
     
