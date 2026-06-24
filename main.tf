@@ -6,6 +6,10 @@ resource "azurerm_resource_group" "rg2" {
 name = "rg-prod"
 location = "central india"
 }
+resource "azurerm_resource_group" "rg3" {
+name = "rg-stag"
+location = "central india"
+}
 resource "azurerm_virtual_network" "vnet1" {
   name                = "dev-vnet"
   resource_group_name = azurerm_resource_group.rg1.name
