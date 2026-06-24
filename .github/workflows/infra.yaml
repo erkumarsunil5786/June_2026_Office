@@ -43,7 +43,7 @@ jobs:
   terraform_init_plan:
     name: Terraform Init & Plan
     needs: terraform_scan
-    # if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
     - name: Checkout source code
@@ -72,7 +72,7 @@ jobs:
     name: Terraform Init & Apply
     # needs: terraform_scan
     needs: terraform_init_plan
-    # if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
     - name: Checkout source code
